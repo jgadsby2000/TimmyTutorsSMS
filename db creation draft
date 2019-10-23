@@ -1,0 +1,53 @@
+sqlite3 SADbois.db
+
+CREATE TABLE Badges(
+    	badgeID INTEGER PRIMARY KEY,
+	badgeColour TEXT,
+   	testID INTEGER,
+);
+
+CREATE TABLE Student(
+	studentID INTEGER PRIMARY KEY,
+	firstname TEXT,
+	lastname TEXT,
+	badgeID INTEGER
+);
+
+CREATE TABLE Teacher(
+	teacherID INTEGER PRIMARY KEY,
+	firstname TEXT,
+	lastname TEXT,
+);
+
+CREATE TABLE AttendanceBook(
+	studentID INTEGER PRIMARY KEY,
+	weekend_sessions_attended INTEGER,
+	meetings_attended INTEGER,
+	teacherID INTEGER,
+);
+
+CREATE TABLE Leaderboard(
+	studentID INTEGER PRIMARY KEY,
+	rank INTEGER,
+	score INTEGER,
+);
+
+CREATE TABLE Group(
+	groupID INTEGER PRIMARY KEY,
+	studentID INTEGER,
+);
+
+CREATE TABLE Test(
+	testID INTEGER PRIMARY KEY,
+	topic TEXT,
+);
+
+CREATE TABLE Topic(
+	topicID INTEGER PRIMARY KEY,
+	teacherID INTEGER,
+);
+
+CREATE TABLE Part(
+	partID INTEGER PRIMARY KEY,
+	topicID INTEGER,
+);
