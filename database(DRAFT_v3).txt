@@ -7,7 +7,7 @@ CREATE TABLE Badges(
 );
 
 CREATE TABLE BadgeColor(
-	badgeID INTEGER,
+	badgeID INTEGER
 	PRIMARY KEY,
 	badgeColor TEXT
 );
@@ -17,11 +17,11 @@ CREATE TABLE Students(
 	PRIMARY KEY,
 	firstname TEXT,
 	lastname TEXT,
-	dob DATE,
+	dob DATE
 );
 
-CREATE TABLE Group(
-	groupID INTEGER,
+CREATE TABLE groupTable(
+	groupID INTEGER
 	PRIMARY KEY,
 	studentID INTEGER
 );
@@ -41,13 +41,13 @@ CREATE TABLE Attendance(
 CREATE TABLE Meeting(
 	meetingID INTEGER,
 	teacherID INTEGER,
-	time/date DATE,
+	timedate DATE,
 	place TEXT,
 	topic TEXT
 );
 
 CREATE TABLE WeeklyIntensives(
-	weeklyIntensivesID INTEGER,
+	weeklyIntensivesID INTEGER
 	PRIMARY KEY,
 	studentID INTEGER,
 	week1 BOOLEAN,
@@ -57,7 +57,7 @@ CREATE TABLE WeeklyIntensives(
 );
 
 CREATE TABLE WeeklyMeetings(
-	weeklyMeetingID INTEGER,
+	weeklyMeetingID INTEGER
 	PRIMARY KEY,
 	studentID INTEGER,
 	week1 BOOLEAN,
