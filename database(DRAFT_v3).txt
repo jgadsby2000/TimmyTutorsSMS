@@ -1,0 +1,98 @@
+sqlite3 SADbois.db
+
+CREATE TABLE Badges(
+    	badgeID INTEGER 
+	PRIMARY KEY,
+	studentID INTEGER
+);
+
+CREATE TABLE BadgeColor(
+	badgeID INTEGER,
+	PRIMARY KEY,
+	badgeColor TEXT
+);
+
+CREATE TABLE Students(
+	studentID INTEGER 
+	PRIMARY KEY,
+	firstname TEXT,
+	lastname TEXT,
+	dob DATE,
+);
+
+CREATE TABLE Group(
+	groupID INTEGER,
+	PRIMARY KEY,
+	studentID INTEGER
+);
+
+CREATE TABLE Teacher(
+	teacherID INTEGER 
+	PRIMARY KEY,
+	firstname TEXT,
+	lastname TEXT
+);
+
+CREATE TABLE Attendance(
+	meetingID INTEGER,
+	studentID INTEGER
+);
+
+CREATE TABLE Meeting(
+	meetingID INTEGER,
+	teacherID INTEGER,
+	time/date DATE,
+	place TEXT,
+	topic TEXT
+);
+
+CREATE TABLE WeeklyIntensives(
+	weeklyIntensivesID INTEGER,
+	PRIMARY KEY,
+	studentID INTEGER,
+	week1 BOOLEAN,
+	week2 BOOLEAN,
+	week3 BOOLEAN,
+	weekN BOOLEAN
+);
+
+CREATE TABLE WeeklyMeetings(
+	weeklyMeetingID INTEGER,
+	PRIMARY KEY,
+	studentID INTEGER,
+	week1 BOOLEAN,
+	week2 BOOLEAN,
+	week3 BOOLEAN,
+	weekN BOOLEAN
+);
+
+CREATE TABLE Leaderboard(
+	studentID INTEGER 
+	PRIMARY KEY,
+	rank INTEGER,
+	score INTEGER
+);
+
+CREATE TABLE Test(
+	testID INTEGER 
+	PRIMARY KEY,
+	testName Text,
+	studentID INTEGER,
+	badgeID INTEGER,
+	completionStatus BOOLEAN
+);
+
+CREATE TABLE Topic(
+	topicID INTEGER 
+	PRIMARY KEY,
+	studentID INTEGER,
+	topicName TEXT,
+	testID INTEGER
+);
+
+CREATE TABLE Part(
+	partID INTEGER 
+	PRIMARY KEY,
+	partName TEXT,
+	topicID INTEGER
+);
