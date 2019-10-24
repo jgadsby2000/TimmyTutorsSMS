@@ -7,8 +7,9 @@ CREATE TABLE Badges(
 );
 
 CREATE TABLE BadgeColor(
-	badgeID INTEGER
+	badgeColorID INTEGER
 	PRIMARY KEY,
+	badgeID INTEGER,
 	badgeColor TEXT
 );
 
@@ -17,10 +18,10 @@ CREATE TABLE Students(
 	PRIMARY KEY,
 	firstname TEXT,
 	lastname TEXT,
-	dob DATE
+	dob DATE,
 );
 
-CREATE TABLE groupTable(
+CREATE TABLE Group(
 	groupID INTEGER
 	PRIMARY KEY,
 	studentID INTEGER
@@ -34,41 +35,45 @@ CREATE TABLE Teacher(
 );
 
 CREATE TABLE Attendance(
+	attendance INTEGER
+	PRIMARY KEY,
 	meetingID INTEGER,
 	studentID INTEGER
 );
 
 CREATE TABLE Meeting(
-	meetingID INTEGER,
+	meetingID INTEGER
+	PRIMARY KEY,
 	teacherID INTEGER,
-	timedate DATE,
+	time/date DATE,
 	place TEXT,
 	topic TEXT
 );
 
-CREATE TABLE WeeklyIntensives(
-	weeklyIntensivesID INTEGER
+CREATE TABLE WeekendIntensives(
+	weekendIntensivesID INTEGER
 	PRIMARY KEY,
 	studentID INTEGER,
-	week1 BOOLEAN,
-	week2 BOOLEAN,
-	week3 BOOLEAN,
-	weekN BOOLEAN
+	week1 BOOLEAN DEFAULT FALSE,
+	week2 BOOLEAN DEFAULT FALSE,
+	week3 BOOLEAN DEFAULT FALSE,
+	weekN BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE WeeklyMeetings(
 	weeklyMeetingID INTEGER
 	PRIMARY KEY,
 	studentID INTEGER,
-	week1 BOOLEAN,
-	week2 BOOLEAN,
-	week3 BOOLEAN,
-	weekN BOOLEAN
+	week1 BOOLEAN DEFAULT FALSE,
+	week2 BOOLEAN DEFAULT FALSE,
+	week3 BOOLEAN DEFAULT FALSE,
+	weekN BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE Leaderboard(
-	studentID INTEGER 
+	leaderID INTEGER
 	PRIMARY KEY,
+	studentID INTEGER 
 	rank INTEGER,
 	score INTEGER
 );
@@ -87,12 +92,14 @@ CREATE TABLE Topic(
 	PRIMARY KEY,
 	studentID INTEGER,
 	topicName TEXT,
-	testID INTEGER
+	testID INTEGER,
+	completionStatus BOOLEAN
 );
 
 CREATE TABLE Part(
 	partID INTEGER 
 	PRIMARY KEY,
 	partName TEXT,
-	topicID INTEGER
+	topicID INTEGER,
+	completionStatus BOOLEAN
 );
