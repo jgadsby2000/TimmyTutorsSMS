@@ -101,5 +101,6 @@ CREATE TABLE Part(
 	PRIMARY KEY,
 	partName TEXT,
 	topicID INTEGER,
+	studentID INT,
 	completionStatus BOOLEAN
 );
