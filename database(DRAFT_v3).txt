@@ -18,10 +18,10 @@ CREATE TABLE Students(
 	PRIMARY KEY,
 	firstname TEXT,
 	lastname TEXT,
-	dob DATE,
+	dob DATE
 );
 
-CREATE TABLE Group(
+CREATE TABLE grouptable(
 	groupID INTEGER
 	PRIMARY KEY,
 	studentID INTEGER
@@ -45,7 +45,7 @@ CREATE TABLE Meeting(
 	meetingID INTEGER
 	PRIMARY KEY,
 	teacherID INTEGER,
-	time/date DATE,
+	timedate DATE,
 	place TEXT,
 	topic TEXT
 );
