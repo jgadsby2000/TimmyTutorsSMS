@@ -6,13 +6,13 @@ BadgeColor (badgeColorID {Primary Key}, badgeID, badgeColor)
 
 Students (studentID {Primary Key}, firstname, lastname, dob)
 
-Group (groupID {Primary Key}, studentID {Foreign Key})
+GroupTable (groupID {Primary Key}, studentID {Foreign Key})
 
 Teacher (teacherID {Primary Key}, Firstname, lastname)
 
 Attendance (attendance {Primary Key}, meetingID {Foreign Key}, studentID {Foreign Key})
 
-Meeting (meetingID {Primary Key}, teacherID {Foreign Key}, time/date, place, topic)
+Meeting (meetingID {Primary Key}, teacherID {Foreign Key}, timedate, place, topic)
 
 WeekendIntensives (weekendIntensivesID {Primary Key}, studentID {Foreign Key}, week1, week2, week3, weekN)
 
