@@ -1,2 +1,2 @@
-# SADbois
-Brayden Munro, Reuben Lyndon, J0rd4n L0v4sc7 and Jack Gadsby's SAD assignment 2
+# Timmy Tutors Student Management System
+Brayden Munro, Reuben Lyndon, Jordan Lovaszy and Jack Gadsby's SAD assignment 2
